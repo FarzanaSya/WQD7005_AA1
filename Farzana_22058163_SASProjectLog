@@ -1,0 +1,348 @@
+1                                                          The SAS System                           Monday,  8 January 2024 10:37:00
+
+
+
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+1          filename _emenv catalog 'sashelp.emwip.em_loadmacros.source';
+2          %inc _emenv;
+1088       filename _emenv;
+1089       %let WIP_PROJPATH=%nrstr(~);
+1090       %let WIP_PROJNAME=%nrstr(AA1_DataMining);
+1091       proc display c=sashelp.emwip.em_init.scl; run;
+7644       %let SYSCC=0;
+7645       options VBUFSIZE= 64M;
+2 The SAS System                                                                                                                                                                                                                Monday,  8 January 2024 10:37:0
+0
+
+7646       %let SYSCC=0;
+7647       %let SYSRC=0;
+7648       %let EMEXCEPTIONSTRING=;
+7649       %let SYSMSG=;
+7650       %em_diagram(action=open, projpath=%nrstr(~), projname=%nrstr(AA1_DataMining), dgmId=EMWS1, userId=%nrbquote(22058163), sessionid=5195d219-3676-4c11-b210-a79866e5f577, outfile=DiagramOpenResponse.xml);
+WIP_ACTION:
+DGMID: EMWS1
+LOCKFILE: ~/AA1_DataMining/Workspaces/EMWS1/System/wsopen.lck
+7662       %let _EM_TREECONVERSION=0;
+7663       data _null_;
+7664       set EMWS1.EM_NODEID end=eof;
+7665       where upcase(Component) ='DECISIONTREE' and CLASS = 'SASHELP.EMMODL.DECISIONTREE.CLASS';
+7666       if eof then call symput('_EM_TREECONVERSION', '1');
+7667       run;
+treeconversion=0 
+7668       %let syscc=0;
+7669       filename _wipchk catalog "EMWS1.Boost.test.source";
+7670       data _null_;
+7671       file _wipchk;
+7672       put '/* Test */';
+7673       run;
+7674       data _null_;
+7675       rc = fdelete('_wipchk');
+7676       run;
+7677       filename _wipchk;
+7678       filename _wipxml '/saswork/SAS_work9EEC00015B2E_odaws02-apse1.oda.sas.com/SAS_workDA8100015B2E_odaws02-apse1.oda.sas.com/DiagramOpenResponse.xml' encoding="UTF-8" NOBOM;
+3 The SAS System                                                                                                                                                                                                                Monday,  8 January 2024 10:37:0
+0
+
+WARNING: End of file.
+WARNING: End of file.
+7679       %let SYSCC=0;
+7680       %let SYSRC=0;
+7681       %let EMEXCEPTIONSTRING=;
+7682       %let SYSMSG=;
+7683       %em_diagram(action=SETORIENTATION, projpath=%nrstr(~), projname=%nrstr(AA1_DataMining), dgmId=EMWS1, sessionid=5195d219-3676-4c11-b210-a79866e5f577, orientation=HORIZONTAL);
+WIP_ACTION: OPEN
+DGMID: EMWS1
+LOCKFILE: ~/AA1_DataMining/Workspaces/EMWS1/System/wsopen.lck
+4 The SAS System                                                                                                                                                                                                                Monday,  8 January 2024 10:37:0
+0
+
+WARNING: End of file.
+WARNING: End of file.
+7695       %let SYSCC=0;
+7696       %let SYSRC=0;
+7697       %let EMEXCEPTIONSTRING=;
+7698       %let SYSMSG=;
+7699       %em_diagram(action=setproperties, projpath=%nrstr(~), projname=%nrstr(AA1_DataMining), dgmId=EMWS1, requestFile=DiagramSetPropertiesRequest.xml);
+WIP_ACTION: SETORIENTATION
+DGMID: EMWS1
+LOCKFILE: ~/AA1_DataMining/Workspaces/EMWS1/System/wsopen.lck
+7711       %global EM_REFRESH_PROPERTY;
+7712       %let EM_REFRESH_PROPERTY=N;
+7713       %let syscc=0;
+7714       data WORK._EMVISUALPROPERTIES;
+7715       length NODEID CLASS COMPONENT $32 X Y 8 LABEL $81;
+7716       NODEID = "Boost";
+7717       CLASS='';
+7718       component='';
+7719       X = 955;
+7720       Y= 509;
+7721       LABEL = "Gradient Boosting";
+7722       output;
+7723       NODEID = "CNTRL";
+7724       CLASS='';
+7725       component='';
+7726       X = 757;
+7727       Y= 339;
+7728       LABEL = "Control Point";
+7729       output;
+7730       NODEID = "FIMPORT";
+7731       CLASS='';
+7732       component='';
+7733       X = 174;
+7734       Y= 138;
+7735       LABEL = "Ecommerce";
+7736       output;
+7737       NODEID = "HPDMForest";
+7738       CLASS='';
+7739       component='';
+7740       X = 950;
+7741       Y= 426;
+7742       LABEL = "HP Forest";
+7743       output;
+7744       NODEID = "Impt2";
+7745       CLASS='';
+7746       component='';
+7747       X = 368;
+7748       Y= 238;
+7749       LABEL = "Impute";
+7750       output;
+7751       NODEID = "MdlComp";
+7752       CLASS='';
+7753       component='';
+7754       X = 1187;
+7755       Y= 448;
+7756       LABEL = "Model Comparison";
+7757       output;
+7758       NODEID = "Part";
+7759       CLASS='';
+7760       component='';
+7761       X = 564;
+7762       Y= 345;
+7763       LABEL = "Data Partition";
+7764       output;
+7765       NODEID = "Stat";
+7766       CLASS='';
+7767       component='';
+7768       X = 364;
+7769       Y= 139;
+7770       LABEL = "StatExplore";
+7771       output;
+7772       NODEID = "Stat2";
+7773       CLASS='';
+7774       component='';
+7775       X = 557;
+7776       Y= 237;
+7777       LABEL = "StatExplore after imputation";
+7778       output;
+7779       NODEID = "Tree";
+7780       CLASS='';
+7781       component='';
+7782       X = 947;
+7783       Y= 340;
+7784       LABEL = "Tree";
+7785       output;
+7786       run;
+7787       proc sort data=WORK._EMVISUALPROPERTIES;
+7788       by NODEID;
+7789       run;
+7790       proc sort data=EMWS1.em_nodeid out=_tempNodeid;
+7791       by NODEID;
+7792       run;
+7793       data _tempNodeid;
+7794       update _tempNodeid(in=_a) WORK._EMVISUALPROPERTIES(in=_b);
+7795       by NODEID;
+7796       if _a then output;
+7797       run;
+7798       data EMWS1.em_nodeid;
+7799       set _tempNodeid;
+7800       run;
+7801       proc datasets lib=WORK nolist;
+7802       delete _tempNodeid _EMVISUALPROPERTIES;
+7803       run;
+7804       quit;
+5 The SAS System                                                                                                                                                                                                                Monday,  8 January 2024 10:37:0
+0
+
+7805       %let SYSCC=0;
+7806       %let SYSRC=0;
+7807       %let EMEXCEPTIONSTRING=;
+7808       %let SYSMSG=;
+7809       %em_diagram(action=SAVEASXML, projpath=%nrstr(~), projname=%nrstr(AA1_DataMining), dgmId=EMWS1, sessionid=5195d219-3676-4c11-b210-a79866e5f577, outfile=DiagramSaveAsXMLResponse.xml);
+WIP_ACTION: SETPROPERTIES
+DGMID: EMWS1
+LOCKFILE: ~/AA1_DataMining/Workspaces/EMWS1/System/wsopen.lck
+7821       %let _EM_TREECONVERSION=0;
+7822       data _null_;
+7823       set EMWS1.EM_NODEID end=eof;
+7824       where upcase(Component) ='DECISIONTREE' and CLASS = 'SASHELP.EMMODL.DECISIONTREE.CLASS';
+7825       if eof then call symput('_EM_TREECONVERSION', '1');
+7826       run;
+1 
+7827       %let EM_MACROS=Y;
+7828       filename temp catalog 'sashelp.emutil.em_loadrunmacros.source';
+7829       %include temp;
+11618      filename temp;
+1 
+1 
+11619      data WORK.Boost_VARSETDEFAULT;
+11620      length USE $1;
+11621      label USE = "Use";
+11622      length REPORT $1;
+11623      label REPORT = "Report";
+11624      set EMWS1.Part_CMeta_TRAIN;
+11625      run;
+11633      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Boost/USERTRAINCODE.sas";
+11634      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Boost/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11635      data WORK.FIMPORT_VARSETDEFAULT;
+11636      length ROLE $32;
+11637      length LEVEL $10;
+11638      length REPORT $1;
+11639      label REPORT = "Report";
+11640      length DROP $1;
+11641      length ORDER $8;
+11642      set EMWS1.FIMPORT_EMCMETADEFAULT;
+11643      run;
+11664      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/FIMPORT/USERTRAINCODE.sas";
+11665      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/FIMPORT/VARIABLESETDELTA.txt";
+11666      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/FIMPORT/DELTACODE.txt";
+11667      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/FIMPORT/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11668      data WORK.HPDMForest_VARSETDEFAULT;
+11669      length USE $1;
+11670      label USE = "Use";
+11671      length REPORT $1;
+11672      label REPORT = "Report";
+11673      set EMWS1.Part_CMeta_TRAIN;
+11674      run;
+11682      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/HPDMForest/USERTRAINCODE.sas";
+11683      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/HPDMForest/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11684      data WORK.Impt2_VARSETDEFAULT;
+11685      length USE $1;
+11686      label USE = "Use";
+11687      length METHOD $12;
+11688      length USETREE $1;
+11689      set EMWS1.FIMPORT_CMeta_TRAIN;
+11690      where(ROLE in("TARGET" "INPUT" "REJECTED" "FREQ"));
+11691      run;
+11712      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Impt2/EMNOTES.txt" encoding="UTF-8" NOBOM;
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _INIT >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL SETMETADATA >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL numElements >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _INIT >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL SETMETADATA >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL numElements >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _term >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _term >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _INIT >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL SETMETADATA >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL numElements >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _INIT >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL SETMETADATA >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL numElements >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _term >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _term >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _INIT >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL SETMETADATA >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL numElements >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _INIT >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL SETMETADATA >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL numElements >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _term >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL next >> 
+Executing  SASHELP.EMCORE.EMINFOITERATOR.SCL _term >> 
+11713      data WORK.MdlComp_VARSETDEFAULT;
+11714      length USE $1 NAME $32 ROLE $32 LEVEL $10 EVENT $32 LABEL $200;
+11715      NAME = "Satisfaction_Level";
+11716      ROLE="TARGET";
+11717      LEVEL = 'NOMINAL';
+11718      EVENT = 'UNSATISFIED';
+11719      LABEL = 'Satisfaction_Level';
+11720      output;
+11721      NAME = "Satisfaction_Level";
+11722      ROLE="TARGET";
+11723      LEVEL = 'NOMINAL';
+11724      EVENT = 'UNSATISFIED';
+11725      LABEL = 'Satisfaction_Level';
+11726      output;
+11727      NAME = "Satisfaction_Level";
+11728      ROLE="TARGET";
+11729      LEVEL = 'NOMINAL';
+11730      EVENT = 'UNSATISFIED';
+11731      LABEL = 'Satisfaction_Level';
+11732      output;
+11733      run;
+11734      proc sort data=WORK.MdlComp_VARSETDEFAULT nodupkey NOTHREADS;
+11735      by NAME LEVEL;
+11736      run;
+11737      data WORK.MdlComp_VARSETDEFAULT;
+11738      set WORK.MdlComp_VARSETDEFAULT;
+11739      if _N_ = 1 then USE = "Y";
+11740      else USE = "N";
+11741      run;
+11749      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/MdlComp/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11750      data WORK.Part_VARSETDEFAULT;
+11751      length PARTITIONROLE $14;
+11752      set EMWS1.Impt2_CMeta_TRAIN;
+11753      run;
+11761      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Part/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11762      data WORK.Stat_VARSETDEFAULT;
+11763      length USE $1;
+11764      label USE = "Use";
+11765      length REPORT $1;
+11766      label REPORT = "Report";
+11767      set EMWS1.FIMPORT_CMeta_TRAIN;
+11768      where(ROLE in("ID" "SEGMENT" "TARGET" "INPUT" "REJECTED" "PREDICT" "RESIDUAL" "DECISION" "FREQ"));
+11769      run;
+11777      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Stat/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11778      data WORK.Stat2_VARSETDEFAULT;
+11779      length USE $1;
+11780      label USE = "Use";
+11781      length REPORT $1;
+11782      label REPORT = "Report";
+11783      set EMWS1.Impt2_CMeta_TRAIN;
+11784      where(ROLE in("ID" "SEGMENT" "TARGET" "INPUT" "REJECTED" "PREDICT" "RESIDUAL" "DECISION" "FREQ"));
+11785      run;
+11793      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Stat2/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11794      data WORK.Tree_VARSETDEFAULT;
+11795      length USE $1;
+11796      label USE = "Use";
+11797      length REPORT $1;
+11798      label REPORT = "Report";
+11799      set EMWS1.Part_CMeta_TRAIN;
+11800      run;
+11808      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Tree/USERTRAINCODE.sas";
+11809      filename _extfile "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/Tree/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11810      filename _EMNOTES "/home/u63454901/AA1_DataMining/Workspaces/EMWS1/EMNOTES.txt" encoding="UTF-8" NOBOM;
+11811      filename _EMNOTES;
+11812      libname EMWS1 %nrstr("/home/u63454901/AA1_DataMining/Workspaces/EMWS1");
+11813      filename _wipxml '/saswork/SAS_work9EEC00015B2E_odaws02-apse1.oda.sas.com/SAS_workDA8100015B2E_odaws02-apse1.oda.sas.com/DiagramSaveAsXMLResponse.xml' encoding="UTF-8" NOBOM;
+6 The SAS System                                                                                                                                                                                                                Monday,  8 January 2024 10:37:0
+0
+
+WARNING: End of file.
+WARNING: End of file.
