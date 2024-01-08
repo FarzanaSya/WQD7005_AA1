@@ -1,0 +1,213 @@
+*------------------------------------------------------------*
+User:                u63454901
+Date:                07 January 2024
+Time:                09:42:17
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT      INTERVAL          4
+INPUT      NOMINAL           5
+TARGET     NOMINAL           1
+ 
+ 
+ 
+Variable Levels Summary
+(maximum 500 observations printed)
+ 
+                                Frequency
+     Variable          Role       Count
+ 
+Satisfaction_Level    TARGET        3
+ 
+ 
+ 
+Class Variable Summary Statistics
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+                                         Number
+Data                                       of                                       Mode                        Mode2
+Role     Variable Name          Role     Levels    Missing    Mode               Percentage    Mode2          Percentage
+ 
+TRAIN    Category              INPUT        3         0       Office Supplies      59.29       Furniture        21.04
+TRAIN    City                  INPUT        6         0       Los Angeles          16.94       New York         16.94
+TRAIN    Gender                INPUT        2         0       Female               50.27       Male             49.73
+TRAIN    Marital_Status        INPUT        3         0       Married              65.85       Single           21.04
+TRAIN    Membership_Type       INPUT        3         0       Bronze               33.33       Gold             33.33
+TRAIN    Satisfaction_Level    TARGET       3         0       Satisfied            35.52       Unsatisfied      33.06
+ 
+ 
+ 
+Distribution of Class Target and Segment Variables
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+Data                                                     Frequency
+Role       Variable Name        Role     Level               Count    Percent
+ 
+TRAIN    Satisfaction_Level    TARGET    Satisfied             130    35.5191
+TRAIN    Satisfaction_Level    TARGET    Unsatisfied           121    33.0601
+TRAIN    Satisfaction_Level    TARGET    Neutral               115    31.4208
+ 
+ 
+ 
+Interval Variable Summary Statistics
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+                                          Standard          Non
+Variable             Role         Mean    Deviation     Missing     Missing     Minimum      Median     Maximum    Skewness    Kurtosis
+ 
+Age                  INPUT    33.62881    4.858058          361           5          26          33          43    0.463465    -0.76948
+Items_Purchased      INPUT    12.60056    4.154536          358           8           7          12          21    0.653491    -0.61776
+NumWebVisitsMonth    INPUT    4.141667    3.027163          360           6           0           4          27    2.410881    13.94905
+Total_Spend          INPUT    844.1173    361.6808          366           0       410.8       770.2      1520.1    0.566578    -1.07491
+ 
+ 
+ 
+Class Variable Summary Statistics by Class Target
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN Variable Name=Category
+ 
+                                     Number
+                      Target           of                                       Mode                       Mode2
+Target                Level          Levels    Missing         Mode          Percentage      Mode2       Percentage
+ 
+Satisfaction_Level    Neutral           3         0       Office Supplies      59.13       Furniture       23.48
+Satisfaction_Level    Satisfied         3         0       Office Supplies      62.31       Furniture       21.54
+Satisfaction_Level    Unsatisfied       3         0       Office Supplies      56.20       Technology      25.62
+_OVERALL_                               3         0       Office Supplies      59.29       Furniture       21.04
+ 
+ 
+Data Role=TRAIN Variable Name=City
+ 
+                                     Number
+                      Target           of                                   Mode                          Mode2
+Target                Level          Levels    Missing    Mode           Percentage    Mode2            Percentage
+ 
+Satisfaction_Level    Neutral           2         0       Houston          53.04       Los Angeles        46.96
+Satisfaction_Level    Satisfied         3         0       New York         47.69       San Francisco      46.15
+Satisfaction_Level    Unsatisfied       2         0       Chicago          50.41       Miami              49.59
+_OVERALL_                               6         0       Los Angeles      16.94       New York           16.94
+ 
+ 
+Data Role=TRAIN Variable Name=Gender
+ 
+                                     Number
+                      Target           of                              Mode                   Mode2
+Target                Level          Levels    Missing     Mode     Percentage    Mode2     Percentage
+ 
+Satisfaction_Level    Neutral           2         0       Female      53.04       Male        46.96
+Satisfaction_Level    Satisfied         2         0       Male        53.08       Female      46.92
+Satisfaction_Level    Unsatisfied       2         0       Female      51.24       Male        48.76
+_OVERALL_                               2         0       Female      50.27       Male        49.73
+ 
+ 
+Data Role=TRAIN Variable Name=Marital_Status
+ 
+                                     Number
+                      Target           of                               Mode                   Mode2
+Target                Level          Levels    Missing     Mode      Percentage    Mode2     Percentage
+ 
+Satisfaction_Level    Neutral           3         0       Married      60.00       Single      27.83
+Satisfaction_Level    Satisfied         3         0       Married      70.00       Single      16.92
+Satisfaction_Level    Unsatisfied       3         0       Married      66.94       Single      19.01
+_OVERALL_                               3         0       Married      65.85       Single      21.04
+ 
+ 
+Data Role=TRAIN Variable Name=Membership_Type
+ 
+                                     Number
+                      Target           of                              Mode                   Mode2
+Target                Level          Levels    Missing     Mode     Percentage    Mode2     Percentage
+ 
+Satisfaction_Level    Neutral           2         0       Bronze      53.04       Silver      46.96
+Satisfaction_Level    Satisfied         2         0       Gold        93.85       Silver       6.15
+Satisfaction_Level    Unsatisfied       2         0       Bronze      50.41       Silver      49.59
+_OVERALL_                               3         0       Bronze      33.33       Gold        33.33
+ 
+ 
+ 
+Interval Variable Summary Statistics by Class Target
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN Variable=Age
+ 
+                      Target                                      Non                                        Standard
+Target                Level            Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role     Label
+ 
+Satisfaction_Level    Neutral              36           1         114          27          38     35.5614    1.540228     -1.37474    6.937711    INPUT     Age
+Satisfaction_Level    Satisfied            30           2         128          28          36    30.10938    1.480766     0.562842    1.055547    INPUT     Age
+Satisfaction_Level    Unsatisfied          41           2         119          26          43    35.56303     6.82299     -0.19649     -1.7323    INPUT     Age
+_OVERALL_                                  33           5         361          26          43    33.62881    4.858058     0.463465    -0.76948    INPUT     Age
+ 
+ 
+Data Role=TRAIN Variable=Items_Purchased
+ 
+                      Target                                      Non                                        Standard
+Target                Level            Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role          Label
+ 
+Satisfaction_Level    Neutral               8           3         112           7          12    9.410714    2.006986     0.099103     -1.7683    INPUT    Items_Purchased
+Satisfaction_Level    Satisfied            16           2         128          13          21    17.32031    2.711694     0.104864    -1.48201    INPUT    Items_Purchased
+Satisfaction_Level    Unsatisfied          10           3         118           9          14    10.50847      1.5289      0.77191    -0.93387    INPUT    Items_Purchased
+_OVERALL_                                  12           8         358           7          21    12.60056    4.154536     0.653491    -0.61776    INPUT    Items_Purchased
+ 
+ 
+Data Role=TRAIN Variable=NumWebVisitsMonth
+ 
+                      Target                                      Non                                        Standard
+Target                Level            Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role           Label
+ 
+Satisfaction_Level    Neutral               4           2         113           0          27    4.513274    3.428127     2.713229    15.36266    INPUT    NumWebVisitsMonth
+Satisfaction_Level    Satisfied             4           2         128           0          11    4.140625    2.464662     0.531165    -0.27152    INPUT    NumWebVisitsMonth
+Satisfaction_Level    Unsatisfied           3           2         119           0          25    3.789916    3.151201     2.927151    16.40056    INPUT    NumWebVisitsMonth
+_OVERALL_                                   4           6         360           0          27    4.141667    3.027163     2.410881    13.94905    INPUT    NumWebVisitsMonth
+ 
+ 
+Data Role=TRAIN Variable=Total_Spend
+ 
+                      Target                                      Non                                        Standard
+Target                Level            Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role        Label
+ 
+Satisfaction_Level    Neutral           470.5           0         115       410.8       830.9     613.313    178.0494     0.118634     -1.9856    INPUT    Total_Spend
+Satisfaction_Level    Satisfied        1200.8           0         130      820.75      1520.1    1280.867    187.2062     -0.53839    -0.26442    INPUT    Total_Spend
+Satisfaction_Level    Unsatisfied      525.75           0         121      475.25       730.4    594.2417    97.17616     0.038256    -1.90229    INPUT    Total_Spend
+_OVERALL_                               770.2           0         366       410.8      1520.1    844.1173    361.6808     0.566578    -1.07491    INPUT    Total_Spend
+ 
+ 
+ 
+Chi-Square Statistics
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN Target=Satisfaction_Level
+ 
+Input              Chi-Square    Df      Prob
+ 
+City                 690.2075    10    <.0001
+Membership_Type      333.6054     4    <.0001
+Marital_Status         4.9200     4    0.2956
+Category               4.5034     4    0.3421
+Gender                 0.9819     2    0.6121
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
