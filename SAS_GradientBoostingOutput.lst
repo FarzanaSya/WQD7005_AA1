@@ -1,0 +1,220 @@
+*------------------------------------------------------------*
+User:                u63454901
+Date:                07 January 2024
+Time:                10:48:16
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+Role         Level         Count
+ 
+ID         INTERVAL          1
+INPUT      INTERVAL          4
+INPUT      NOMINAL           5
+TARGET     NOMINAL           1
+ 
+ 
+ 
+ 
+Model Events
+ 
+                                                    Number
+                                     Measurement      of
+      Target             Event          Level       Levels      Order             Label
+ 
+Satisfaction_Level    UNSATISFIED      NOMINAL         3      Descending    Satisfaction_Level
+ 
+ 
+ 
+ 
+Predicted and decision variables
+ 
+Type         Variable                           Label
+ 
+TARGET       Satisfaction_Level                 Satisfaction_Level
+PREDICTED    P_Satisfaction_LevelUnsatisfied    Predicted: Satisfaction_Level=Unsatisfied
+RESIDUAL     R_Satisfaction_LevelUnsatisfied    Residual: Satisfaction_Level=Unsatisfied
+PREDICTED    P_Satisfaction_LevelSatisfied      Predicted: Satisfaction_Level=Satisfied
+RESIDUAL     R_Satisfaction_LevelSatisfied      Residual: Satisfaction_Level=Satisfied
+PREDICTED    P_Satisfaction_LevelNeutral        Predicted: Satisfaction_Level=Neutral
+RESIDUAL     R_Satisfaction_LevelNeutral        Residual: Satisfaction_Level=Neutral
+FROM         F_Satisfaction_Level               From: Satisfaction_Level
+INTO         I_Satisfaction_Level               Into: Satisfaction_Level
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Variable Importance
+ 
+Obs    NAME                   LABEL                       NRULES    IMPORTANCE    VIMPORTANCE     RATIO
+ 
+ 1     City                   City                           4        1.00000       1.00000      1.00000
+ 2     Total_Spend            Total_Spend                    5        0.73256       0.76756      1.04778
+ 3     IMP_Items_Purchased    Imputed: Items_Purchased       1        0.16020       0.15656      0.97726
+ 4     IMP_Age                Imputed: Age                   1        0.12873       0.12249      0.95148
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Fit Statistics
+ 
+Target=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+   Fit
+Statistics    Statistics Label                    Train    Validation
+ 
+  _NOBS_      Sum of Frequencies                255.000      111.000
+  _SUMW_      Sum of Case Weights Times Freq    765.000      333.000
+  _MISC_      Misclassification Rate              0.000        0.000
+  _MAX_       Maximum Absolute Error              0.656        0.611
+  _SSE_       Sum of Squared Errors             109.222       47.632
+  _ASE_       Average Squared Error               0.143        0.143
+  _RASE_      Root Average Squared Error          0.378        0.378
+  _DIV_       Divisor for ASE                   765.000      333.000
+  _DFT_       Total Degrees of Freedom          510.000         .
+ 
+ 
+ 
+ 
+Classification Table
+ 
+Data Role=TRAIN Target Variable=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+                                Target        Outcome     Frequency       Total
+Target         Outcome        Percentage    Percentage      Count      Percentage
+ 
+NEUTRAL        NEUTRAL            100           100           80         31.3725
+SATISFIED      SATISFIED          100           100           90         35.2941
+UNSATISFIED    UNSATISFIED        100           100           85         33.3333
+ 
+ 
+Data Role=VALIDATE Target Variable=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+                                Target        Outcome     Frequency       Total
+Target         Outcome        Percentage    Percentage      Count      Percentage
+ 
+NEUTRAL        NEUTRAL            100           100           35         31.5315
+SATISFIED      SATISFIED          100           100           40         36.0360
+UNSATISFIED    UNSATISFIED        100           100           36         32.4324
+ 
+ 
+ 
+ 
+Event Classification Table
+ 
+Data Role=TRAIN Target=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+    0          170          0          85
+ 
+ 
+Data Role=VALIDATE Target=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+    0          75           0          36
+ 
+ 
+ 
+ 
+Assessment Score Rankings
+ 
+Data Role=TRAIN Target Variable=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     200.000    3.00000      3.00000      100.000      100.000          13           0.46689
+  10     200.000    3.00000      3.00000      100.000      100.000          13           0.46689
+  15     200.000    3.00000      3.00000      100.000      100.000          13           0.46689
+  20     200.000    3.00000      3.00000      100.000      100.000          12           0.46689
+  25     200.000    3.00000      3.00000      100.000      100.000          13           0.46689
+  30     200.000    3.00000      3.00000      100.000      100.000          13           0.46689
+  35     183.333    1.84615      2.83333       61.538       94.444          13           0.40019
+  40     150.000    0.00000      2.50000        0.000       83.333          12           0.26656
+  45     121.739    0.00000      2.21739        0.000       73.913          13           0.26656
+  50      99.219    0.00000      1.99219        0.000       66.406          13           0.26656
+  55      80.851    0.00000      1.80851        0.000       60.284          13           0.26656
+  60      66.667    0.00000      1.66667        0.000       55.556          12           0.26656
+  65      53.614    0.00000      1.53614        0.000       51.205          13           0.26656
+  70      42.458    0.00000      1.42458        0.000       47.486          13           0.26655
+  75      32.813    0.00000      1.32813        0.000       44.271          13           0.26647
+  80      25.000    0.00000      1.25000        0.000       41.667          12           0.26646
+  85      17.512    0.00000      1.17512        0.000       39.171          13           0.26643
+  90      10.870    0.00000      1.10870        0.000       36.957          13           0.26643
+  95       4.938    0.00000      1.04938        0.000       34.979          13           0.26643
+ 100       0.000    0.00000      1.00000        0.000       33.333          12           0.26441
+ 
+ 
+Data Role=VALIDATE Target Variable=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     208.333    3.08333      3.08333        100        100.000           6           0.46689
+  10     208.333    3.08333      3.08333        100        100.000           6           0.46689
+  15     208.333    3.08333      3.08333        100        100.000           5           0.46689
+  20     208.333    3.08333      3.08333        100        100.000           6           0.46689
+  25     208.333    3.08333      3.08333        100        100.000           5           0.46689
+  30     208.333    3.08333      3.08333        100        100.000           6           0.46689
+  35     184.615    1.23333      2.84615         40         92.308           5           0.35401
+  40     146.667    0.00000      2.46667          0         80.000           6           0.26656
+  45     122.000    0.00000      2.22000          0         72.000           5           0.26656
+  50      98.214    0.00000      1.98214          0         64.286           6           0.26656
+  55      79.032    0.00000      1.79032          0         58.065           6           0.26656
+  60      65.672    0.00000      1.65672          0         53.731           5           0.26656
+  65      52.055    0.00000      1.52055          0         49.315           6           0.26656
+  70      42.308    0.00000      1.42308          0         46.154           5           0.26654
+  75      32.143    0.00000      1.32143          0         42.857           6           0.26647
+  80      24.719    0.00000      1.24719          0         40.449           5           0.26647
+  85      16.842    0.00000      1.16842          0         37.895           6           0.26644
+  90      11.000    0.00000      1.11000          0         36.000           5           0.26643
+  95       4.717    0.00000      1.04717          0         33.962           6           0.26585
+ 100       0.000    0.00000      1.00000          0         32.432           5           0.25478
+ 
+ 
+ 
+ 
+Assessment Score Distribution
+ 
+Data Role=TRAIN Target Variable=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.45-0.50       85           0         0.46689        33.3333
+ 0.30-0.35        0           3         0.31140         1.1765
+ 0.25-0.30        0         167         0.26636        65.4902
+ 
+ 
+Data Role=VALIDATE Target Variable=Satisfaction_Level Target Label=Satisfaction_Level
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.45-0.50       36           0         0.46689        32.4324
+ 0.30-0.35        0           1         0.30317         0.9009
+ 0.25-0.30        0          73         0.26627        65.7658
+ 0.20-0.25        0           1         0.22201         0.9009
